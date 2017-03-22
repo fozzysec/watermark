@@ -1,5 +1,5 @@
 # My watermark
-Fozzy Hou, DB228980
+Fozzy
 ## Installation
 ### Install perl Imager###
 To install Imager with TIFF support, install libtiff first.
