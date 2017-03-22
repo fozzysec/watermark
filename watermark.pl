@@ -19,9 +19,13 @@ sub maketbl{
 	#spacing
 	$tbl{' '} = 0;
 
+	#numeric
+	foreach('0'..'9'){
+		$tbl{$_} = ord($_) - ord('0') + 1;
+	}
 	#alphabet
 	foreach('A'..'Z'){
-		$tbl{$_} = ord($_) - ord('A') + 1;
+		$tbl{$_} = ord($_) - ord('A') + 11;
 	}
 
 	#symbols
@@ -44,13 +48,14 @@ sub get_plaintext_size{
 	return (ceil($height), ceil($width));
 }
 
+#(x, y) means (width, height)
 sub get_position{
 	my $hashref = shift;
 	my $index = shift;
 	my ($i, $j) = (0, $index);
-	while($j > $hashref->{width}){
-		$j -= $hashref->{width};
-		die qq/data is too long to embed into image./ if(++$i > $hashref->{height});
+	while($j >= $hashref->{height}){
+		$j -= $hashref->{height};
+		die qq/data is too long to embed into image./ if(++$i > $hashref->{width});
 	}
 	return ($i, $j);
 }
