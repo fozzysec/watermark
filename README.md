@@ -177,4 +177,4 @@ finally, use `decode_from_tbl` to convert watermark sequence back to plaintext.
 ```
 
 ### ps
-sorry for the mass that perl language caused, it is very quick to write but reads terrible.
+sorry for the mess that perl language caused, it is very quick to write but reads terrible.
