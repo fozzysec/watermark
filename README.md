@@ -1,7 +1,7 @@
 # My watermark
 Fozzy
 ## Installation
-### Install perl Imager###
+### Install perl Imager
 To install Imager with TIFF support, install libtiff first.
 ```
 sudo apt-get install libtiff5 libtiff5-dev
